@@ -90,4 +90,15 @@ public class EmployeeController {
         return Result.success(pageResult);
     }
 
+
+    @PostMapping("/status/{status}")
+    @ApiOperation("Active or Deactive Employee Account")
+    public Result status(@PathVariable Integer status, Long id){
+        log.info("Active or Deactiive Employee Account");
+        employeeService.setStatus(status, id);
+        return Result.success();
+    }
+
+
+
 }

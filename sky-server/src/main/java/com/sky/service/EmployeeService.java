@@ -21,4 +21,13 @@ public interface EmployeeService {
      * @return
      */
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * Set Employee Status
+     * @param status
+     * @param id
+     * @return
+     */
+
+    void setStatus(Integer status, Long id);
 }
