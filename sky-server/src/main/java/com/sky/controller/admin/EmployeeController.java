@@ -99,6 +99,22 @@ public class EmployeeController {
         return Result.success();
     }
 
+    @GetMapping("/{id}")
+    @ApiOperation("Query Employee Info")
+    public Result getById(@PathVariable  Long id){
+        log.info("Query Employee Info by Employee Id");
+        Employee employee = employeeService.getById(id);
+        return Result.success(employee);
+    }
+
+
+    @PutMapping()
+    @ApiOperation("Update Employee Info")
+    public Result update(EmployeeDTO employeeDTO){
+        log.info("Update Employee Info");
+        employeeService.update(employeeDTO);
+        return Result.success();
+    }
 
 
 }
