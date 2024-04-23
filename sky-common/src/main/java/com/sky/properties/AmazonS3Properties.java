@@ -5,11 +5,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "sky.alioss")
+@ConfigurationProperties(prefix = "sky.amazon-s3")
 @Data
-public class AliOssProperties {
+public class AmazonS3Properties {
 
-    private String endpoint;
     private String accessKeyId;
     private String accessKeySecret;
     private String bucketName;
