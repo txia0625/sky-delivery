@@ -63,6 +63,7 @@ public class DishServiceImpl implements DishService {
     }
 
     @Override
+    @Transactional
     public void deleteBatch(List<Long> ids) {
         for(Long id: ids)
         {
